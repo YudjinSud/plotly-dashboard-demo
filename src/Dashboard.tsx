@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
-import plotly from 'plotly.js/dist/plotly';
+import * as Plotly from 'plotly.js/dist/plotly';
 import PlotlyEditor from 'react-chart-editor';
 import 'react-chart-editor/lib/react-chart-editor.css';
 import { Button, Modal, Select } from '@gravity-ui/uikit';
@@ -182,7 +182,7 @@ const Dashboard: React.FC = () => {
               frames={tempGraphic.frames}
               dataSources={dataSources}
               dataSourceOptions={dataSourceOptions}
-              plotly={plotly}
+              plotly={Plotly}
               onUpdate={(data, layout, frames) => handleEditorUpdate(data, layout, frames)}
               useResizeHandler
               debug
